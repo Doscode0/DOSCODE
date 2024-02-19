@@ -1,0 +1,16 @@
+body{
+    display: grid;
+    
+    place-items: center;
+    height: 100vh;
+    background: #222237;
+}
+
+a{
+    color: rgb(245, 236, 236);
+    
+    
+}
+#sizee{
+    font-size: 60px;
+}

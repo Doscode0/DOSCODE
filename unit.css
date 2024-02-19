@@ -1,0 +1,19 @@
+a{
+    font-size: 30px;
+    align-items: center;
+    text-decoration: none;
+    color: red;
+
+}body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #222237;
+}
+h1{
+  color: rgb(255, 119, 0);
+  text-decoration: underline;
+  text-align: center;
+  align-items: center;
+}

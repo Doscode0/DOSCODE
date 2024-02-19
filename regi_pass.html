@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registation successfully</title>
+    <link rel="icon" type="image" href="icon.jpeg">
+</head>
+<body>
+    <h4>Your Password is :- doscode</h4>
+    <h4>If Any Problem Contact</h4>
+    <p>doscode437@gmail.com</p>
+    <p>+91 7377367597</p>
+
+    <h4>
+      <a href="getst.html">Go To login Page</a>
+    </h4>
+    <h3>Join Us In WhatsApps...To Know All Update</h3>
+    <a href="https://chat.whatsapp.com/EXHLJO97dzzDxYOS4HiEgK">https://chat.whatsapp.com/EXHLJO97dzzDxYOS4HiEgK</a>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwEV8Fs8DOt7uaNhWIsv0qyfYOjUA8E_UaeY_801Uo8ZaLE8TiS4d3oBVrPbFpLX-cA/exec'
+        const form = document.forms['submit-to-google-sheet']
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Password is-doscode', response))
+            
+            .catch(error => console.error('Error!', error.message));
+        })
+      </script>
+</body>
+</html>
