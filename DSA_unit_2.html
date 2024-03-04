@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>1)DIFFERENCE BETWEEN STACK AND QUEUE</h4>
+<pre>
+       STACK                          QUEUE
+__________________________|_______________________________
+i)Stack follow LIFO       |i)Queue follow FIFO operation
+operation i.e - last-     |i.e - first-in-first-out.
+in-first-out              |
+ii)Insertion and delection|ii)Insertion and delection takes 
+take place one end.This   |place on opposite end.
+end is called top of      | 
+stack .                   |
+iii)Stack perform two     |iii)Queue perform two operation
+operation i.e 1) PUSH     | i.e 1)Rear
+          2)POP       |     2)Front
+iv)PUSH -> used to insert |iv)REAR -> Used to insert the
+the element in stack.     |element in queue. 
+v)POP -> Used to delete   |v)FRONT -> Used to delete the
+the elemen from the       |telemen from the queue
+stack.                    |
+vi)Stack doesn't have any |vi)Queue has various type like
+type.                     |general queue, circular queue
+                      | and doubly queue
+vii)In stack only one     |vii)But, in queue two different
+pointer is used  i.e Top  |point are used i.e Rear & Front.
+of the stack.             |
+
+
+    <br><br>
+    <h4>2)CIRCULAR QUEUE</h4>
+    i)A circular queue is one in which the insertion of a new element is done at the 1st location of the queue if the last location of queue is full .<br>
+    
+
+
+
+    ii)a circular queue overcome the problem of unutiliged space in linear queue implemented as arrays .
+    
+
+    <h4>3)CIRCULAR QUEUE HAS FOLLOWING CONDITION </h4>
+
+    i)front will always be pointing to the 1st element .<br>
+    ii)If front = Rear the queue will be empty . <br>
+    iii)each time a new element is inserted to the queue the Rear is incremented by one .<br>
+    <pre>      Rear = Rear + 1</pre>
+    iv)Each time on element is deleted from the queue the value of front is incremented by one .<br>
+
+    <h4>4)INSERT AN ELEMENT IN CIRCULAR QUEUE ALGORITHM</h4>
+
+    <pre>
+        QINERT(QUEUE[MAX_SIZE],ITEM)
+        Step 1 :- if(front == (Rear*1)% MAX_SIZE)
+        write queue is overflow & Exit
+        else
+        take the value
+        if(front == -1)
+        set front = 0
+        Rear = 0
+        else
+        Rear = (Rear+1)%MAX_SIZE
+        [Assign value] Queue [Rear] = value
+        [End if]
+    Step 2 :- Exit
+    </pre>
+
+    <h4>5)DELETE AN ELEMENT IN CIRCULAR QUEUE ALGORITHM</h4>
+
+    <pre>
+    QDELETE(QUEUE[MAX_SIZE],ITEM)
+    Step 1 :- if(front == -1)
+	write queue is underflow & Exit
+	else
+	item = Queue[front]
+	if(front == Rear)
+	set front = -1
+	Rear = -1
+	else
+	Rear = ((front+1)%MAX_SIZE)
+	[End if]
+Step 2 :- Exit
+</pre>
+<h4>6)DEQUEUE / DEQUE</h4>
+i)A deque is a linear list in which elements can be added or remove at either end but not in the middle .<br>
+ii)Deque is maintained by a circular array with pointers left and right which points two ends of deque .
+
+
+
+
+
+
+<h4>7)INPUT RESTRICTED DEQUE</h4>
+Allow insertion at only one end of the list but allow deletion at both ends 
+<h4>8)OUTPUT RESTRICTED DEQUE</h4>
+<h4>9)PRIORITY QUEUE</h4>
+A priority queue is collection of elements such that each element has been assigned a priority such that the order in which elements are deleted & processed comes from the following rules . <br><br>
+i)An element of higher priority is processed before the element with lower priority .<br>
+ii)Two elements with the same priority are processed according to the order in which they were added to the queue . 
+
+
+</body>
+</html>
