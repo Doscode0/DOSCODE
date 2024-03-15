@@ -91,10 +91,10 @@ ex :- step 1,step 2,step :-3.....<br>
 4> Declaration shall be using let 
 <br>
 ex:- let x,y<br>
-5> Assignment statement can be using '=' or := or '<-'<br>
+5> Assignment statement can be using '=' or := or '< -'<br>
 ex :- x=35<br>
 x := 35<br>
-x <- 35 <br>
+x < - 35 <br>
 6> To input data we can use input / Accept / read <br>
 7> To output data we can use Display / write / print .<br> 
 <h4 id="p">7)DATATYPE AND ITS TYPE:</h4>
@@ -240,25 +240,27 @@ E)MERGING:-
 </pre>
 <h4>22)TRAVERSING IN A LINEAR ARRAY </h4>
 <pre>
-  i)[Initialige counter] set K=LB. 
-  ii)Repeat steps 3 and 4 while K< UB.
-  iii)[Visit elements apply process to linear array of [K]].
-  iv)[Increase the counter]  set K <- K++
-  v)[End of stop 2 loop].
-  vi)Exist.
+    TRAVERSAL(arr[],n)
+i)for(let i=0 to n-`)increase by 1
+ii)[Now visit all elements]  
+iii)print arr[i]
+iv)[end step -1 for loop] 
+v)exit
 </pre>
 <h4>23.INSERTION IN LINEAR ARRAYS</h4>
 <pre>
-  -Here LA is a linear array with  N elements and K is a positive intiger. such that K< N This algorithm inserts an element item into the Kth position in LA. 
- I)[Intialge counter] set J=N.
- II)Repeat step 3&4 while J>K.
- III)[Move jth element downward]
-     Set LA[J+1]=LA[J]
- IV)[Decrease counter] Set J=J-1
-    [End of step 2 loop]
- V)[Insert element set LA[K]= ITEM
- VI)[Rest N] Set N=NH
- VII)EXIT.
+ Here capacity is max size of array , n is size of arrey stored element  , index is use for to input element in specific location and item is use for to input insert element . <br>
+      INSERTION(arr[capacity],n,index,item)
+i)if(size>=capacity)then
+print "Overflow" & exit
+   else
+i)for(let i=index to size-1)decrease by 1
+iii)set arr[i+1]=arr[i] 
+   [end for loop]
+iv)set arr[index]= item
+   [end else loop]
+v)set n=n+1
+vi)exit
 </pre>
 
 <h4>23.INSERTION IN LINEAR ARRAYS CODE</h4><pre>
@@ -306,13 +308,15 @@ E)MERGING:-
       </pre> </pre>
 <h4>24)DELETION FROM ARRAYS</h4>
         <pre>       DELETE(A,N,k,ITEM)
- 1. Step-1:Start
- 2. Step-2: set ITEM=a[k]
- 3. Step-3: Repeat for J=K to N-1
-       set A[J]=a[j+1]
-      [End the loop]
-  4. Step-4: Set N=N-1
-  5. Step-5: Exit.</pre>
+    DELETION(arr[],n)
+i)Start
+ii)for(let i = size-1 to index)increase by 1
+iii)set arr[i] = arr[i+1]
+    [end for loop]
+iv)set n= n-1
+v)exit
+
+ </pre>
 
 </div>
 <h4>25)DELETION FROM ARRAYS CODE</h4>
@@ -359,21 +363,26 @@ E)MERGING:-
   <br><br>
   ALGORITHAM:-<br>
   ----------------------<br>
-  <pre>1. Step-1:  Begin
-    2. Step-2:  Input a[5] 
-    3. Step-3:  Set 1 <- 3  //(i=3) {Note:- In algoritham don't use '='. Always use <- for set item value}
-    4. Step-4:  Repeat step 4 & 9  While(i>=0)
-    5. Step-5:  Set j <- 0 	//(j=0)
-    6. Step-6:  Repeat step 3 & 8  While(j<=i)
-    7. Step-7:  if(a[j]>a[j+1])
-          Set temp<- a[i]
-              a[j] <- a[j+1]
-        a[j+1] <-temp
-    8. Step-8:  j <- j+1
-    9. Step-9:  i<-i-1
-    10. Step-10:  print a[5]
-    11. Step-11:  Exist.
+  <pre>
+    BUBBLESORT(arr[100],size)
+Step-1:  Begin
+ii)for(let i = 0 to size-1)increase by one 
+iii)let set flag = 0
+iv)for(let j = 0 to size - i) increase ny one 
+v)if(arr[j]>arr[j+1])then
+vi) let set temp = arr[j]
+       set arr[j] = arr[j+1]
+       set arr[j+1] = temp
+       set flag = 1 
+    [end if loop]
+    [end set iii for loop]
+vii)if(flag = 0)then
+    break and exit
+    [end step ii for loop]
+
+
     </pre>
+/* Here flag is use for less time complexity */
   
     <h4>27)BUBBLE SORT CODE</h4>
     <pre>
@@ -421,17 +430,21 @@ It is a very basic and simple search an element in given array by travesing the 
 <br>
 ALGORITHM:-<br>
 --------------------<br>
-<pre>1.Step-1: Begin
-  2.Step-2: Set a[5] <- {10,20,30,40,50}
-  3.Step-3: Set i <- 0
-  4.Step-4: Input searching item
-  5.Step-5: Repeat step 6 & 7 while(i<5)
-  6.Step-6: if a[i]=item then
-      print item found & location = i & exist
-  7.Step-7: Set i <- i+1
-  8.Step-8: if j>=5 then 
-      print item not found
-  9.Step-9: End.
+<pre>
+    LINEARSEARCH(arr[],n,item)
+i)Start
+ii)let set loc = 0
+iii)for(let i=0 to n-1)increase by 1
+iv)if(arr[i]=item)then
+    set loc = loc+1
+    [end if loop]
+    [end for loop]
+v)if(loc>=1)then
+    print "Item is present"
+    [closed if loop]
+    else
+    print "Item is not present"
+    [end else loop]
 </pre>
 <h4>29)LINEAR SEARCH CODE</h4>
 
@@ -471,21 +484,24 @@ If item is not found the we again cheak the target elements is greater than or l
 ALGORITHM:-<br>
 -------------------
 <br>
-<pre>Step-1: Begin
-Step-2: Set a[5] <- {10,20,30,40,50)
-Step-1: Set lr <- 0 , up <- 4 , f <- 0
-Step-3: Input searching item
-Step-4: Reapet (6) & (8) while (lr <= up)
-Step-5: Set mid <- (lr+up)/2
-Step-6: If a[mid] = item then set f <- 1 & break
-Step-7: If a[mid] < item then set lr <- mid+1 
-                  else
-    set up <- mid-1
-Step-8: If f=1 then
-      print item found with loc = mid
-          else
-       print not found
-Step-9: Exist. </pre>
+<pre>
+    BINARYSEARCH(arr[],UB,LB,item)
+Step-1: start
+ii)let mid
+iii)while(LB< UB)
+iv)set mid = (UB+LB)/2
+v)if(arr[mid]=item)then
+   print "present" & break
+   else
+vi)if(arr[mid]< item)
+    LB = mid +1
+    [end if loop]
+    else
+    set UB = mid - 1
+    [end else loop]
+    [end while loop]
+vii)Exit
+ </pre>
 
 
 <h4>31)BINARY SEARCH CODE</h4>
@@ -542,6 +558,38 @@ Step-9: Exist. </pre>
 <h4>32)SPARSE MATRIX</h4>
 sparse matrices are those matrices which have the majority of their elements equal to zero.
 
+ALGORITHAM<br>
+-------------------
+<h4>Write down the algorithm to test a matrix is sparse or not and if sparse store the non-zero information into another 3-column matrix.</h4>
+
+ SPARSE(arr[100][],n,m)
+ i)start
+ ii)let nz = 0 ,z = 0 //while nz = none zero element or z = zero
+ iii)for(let i = 0 to m-1)increase by 1
+ iv)for(let j=0 to n-1 )increase by 1
+ v)if(arr[i][j] = 0) then 
+    set z = 0
+    [end if loop]
+    else
+    set nz=0
+    [end else loop]
+    [end step iv for loop]
+    [end step iii for loop]
+vi)if(nz>z) then
+Point "yes it is a sparse matrix"
+    [end if loop]
+else
+vii)let set k = 0 , sp[n][n]
+viii)for(let i = 0 to n-1)increase by 1
+ix)for(let j=0 to n-1)
+x)  if(arr[i][j] != 0)then
+    set sp[k][0] = i
+    set sp[k][1] = j
+    set sp[k][2] = arr[i][j]
+    set k++
+    [end if loop]
+    [end step ix loop]
+    [end step viii for loop]
 <h4>33)SPARSE MATRIX CODE</h4>
 <pre>#include< stdio.h>
   int main(){
