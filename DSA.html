@@ -510,10 +510,10 @@ vii)Exit
 <pre>#include< stdio.h>
   int binarysearch(int arr[],int size,int item);
   int main()
-  {
-      int n;
-      printf("Enter the array size:- ");
-      scanf("%d",&n);
+   {
+    int n;
+    printf("Enter the array size ");
+    scanf("%d",&n);
       int lr=0;int up=n-1;
       int arr[n];
       printf("Enter the array element in Ascending Order:- ");
@@ -536,20 +536,20 @@ vii)Exit
   }
   int binarysearch( int arr[],int size,int item)
   {
-      int lr=0,up=size-1;// here lr is lower and up is upper
-      int f=0;int mid;
+      int lB=0,UB=size-1;// here LB is lower Bounded and up is Upper Bounded
+      int mid;
       while(lr<=up)
       {
-          mid=(lr+up)/2;
+          mid=LB+(UB-LB)/2
           if(arr[mid]==item)
           {
               return mid;
           }
           if(arr[mid< item])
           {
-              lr=mid+1;
+              LB=mid+1;
           }else{
-              up=mid-1;
+              UB=mid-1;
           }
           return -1;
       }
