@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DSA Unit 2</title>
     <link rel="stylesheet" href="DSA_unit_2.css">
 </head>
 <body>
 
-    1)QUEUE</h4>
+   <h4>1)QUEUE</h4>
     i) Queue is a Non-primitive linear data structure.<br>
     ii)It is an homogenous collection of element in which new elements are added at one end called the Rear end and the existing element are delected from other end called the front end.<br>
     iii)The first added element will be the first to be remove from the queue sothat queue is called FIFO(first-in-first-out).<br>
@@ -190,12 +190,111 @@ ii)Deque is maintained by a circular array with pointers left and right which po
 
 <h4>10)INPUT RESTRICTED DEQUE</h4>
 Allow insertion at only one end of the list but allow deletion at both ends 
+
+
 <h4>11)OUTPUT RESTRICTED DEQUE</h4>
+
+
 <h4>12)PRIORITY QUEUE</h4>
 A priority queue is collection of elements such that each element has been assigned a priority such that the order in which elements are deleted & processed comes from the following rules . <br><br>
 i)An element of higher priority is processed before the element with lower priority .<br>
-ii)Two elements with the same priority are processed according to the order in which they were added to the queue . 
+ii)Two elements with the same priority are processed according to the order in which they were added to the queue . <br>
+<h4>13)LINEAR SEARCH</h4>
+-It is a very basic and simple search an element in given array by starting till the disred element is found.<br>
+-In linear search we can find element in list of element.<br>
+ALGORITHAM<br>
+-----------------<br>
+1)start<br>
+2)let arr[Size]<br>
+3)Store the element in arr<br>
+4)let item<br>
+5)print "enter the item"<br>
+6)input item<br>
+7)let flag = 0<br>
+8)for(let i=0;i< size;i++)<br>
+9)if(arr[i]=item)then<br>
+10)set flag = i;<br>
+[end for loop]<br>
+11)if(flag = 0)then<br>
+12)print "item is not present"<br>
+13)else<br>
+print "item is present and location is ",flag<br>
+14)exit.
+<br>
+<h4>14)BINARY SEARCH</h4>
+It is the devide an conquer searching technique in which we have to arrage the data in particular format before searching operation. After that we find the middle element of array compare with target element (searching element).<br>
+If item is not found we again check the target element is greater than or less than middle element ,if it greater than we search right side of middle element otherwise left side of middle element.<br>
+ALGORITHAM<br>
+---------------<br>
+<pre>
+   binary_search(arr[],size,item)
+1)start
+2)let LB=0,UB= size -1 ,flag = 0,mid=0,item
+3)print "Enter the searching item"
+4)read item // you can also write input item
+3)while(LB<=UB)
+4)mid=LB+(UB-LB)/2    // you can also write (LB+UB)/2 .
+5)if(arr[mid] = item)then
+6)set flag = mid 
+   [end if loop]
+7)if(arr[mid]>item)Then
+8)set UB=mid-1
+9)else
+  set LB = mid+1
+    [End while loop]
+</pre>
 
+<h4>15)BUBBLE SORT</h4>
+Bubble sort arrage n number of array element on proper position . It always arrange data in descending order or ascending order . 
+<br>
+ALGORITHAM<br>
+--------------------<br>
+<pre>
+     Bubble_sort(arr[],size)
+1)for(let i = 0;i< size;i++)
+2)let flag = 0
+3)for(let j=0;j< size-i-1;j++)
+4)if(arr[j] > arr[j+1])
+5)let temp = arr[j] 
+6)set arr[j] = arr[j+1] 
+7)set arr[j+1] = temp
+8)set flag = 1 // flag is used for less time complexity
+   [end if loop] 
+   [end step 3 for loop] 
+9)if(flag = 0)then break 
+   [end step 1 for loop] 
+10)exit.
+</pre>
+<h4>16)INSERTION SORT ALGORITHAM</h4> 
+<pre>
+     Insertion_sort(arr[],size)
+1)for(let i=0;i< size;i++)
+2)let j=1 
+3)while(j>=i && arr[j]< arr[j-1])
+4)let temp = arr[j] 
+5)arr[j-1] = arr[j] 
+6)arr[j] = temp
+7)set j=j-1 // you can also write j--
+   [End while loop] 
+   [End for loop] 
+8)Exit.
+<h4>17)SELECTION SORT ALGORITHAM</h4>
+<pre>
+    Selection_sort(arr[],size)
+1)for(let i=0;i< size-1;i++)
+2)let min= -1 
+3)for(let j=i;j< size;j++)
+4)if(min > arr[j])
+5)min = j
+  [End if loop]
+  [End step 3 for loop]
+6)let temp = arr[i] 
+7)set arr[i] = arr[min] 
+8)set arr[min] = temp
+  [End step 1 for loop] 
+9)Exit.
+</pre>
 
-</body>
+</pre>
+</body>  
 </html>
